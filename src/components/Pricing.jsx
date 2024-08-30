@@ -1,4 +1,11 @@
+import { useState } from "react";
+
 const Pricing = () => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleToggle = () => {
+    setIsChecked(!isChecked);
+  };
   return (
     <div className="dark:bg-black min-h-screen">
       <div class="relative">
@@ -17,25 +24,38 @@ const Pricing = () => {
             </p>
           </div>
 
-          <div class="flex justify-center items-center">
+          <div className="flex justify-center items-center">
             <label
-              for="pricing-switch"
-              class="min-w-14 text-sm text-gray-600 me-3 dark:text-neutral-400"
+              htmlFor="pricing-switch"
+              className="text-sm text-gray-600 dark:text-neutral-400 me-3"
             >
               Monthly
             </label>
-            x
-            <input
-              type="checkbox"
-              id="pricing-switch"
-              className="relative w-[3.25rem] h-7 p-px bg-gray-100 border-transparent text-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:ring-purple-600 disabled:opacity-50 disabled:pointer-events-none checked:bg-none checked:text-purple-600 checked:border-purple-600 focus:checked:border-purple-600 dark:bg-neutral-800 dark:border-neutral-800 dark:checked:bg-purple-500 dark:checked:border-purple-500 dark:focus:ring-offset-gray-600
-
-          before:inline-block before:size-6 before:bg-white checked:before:bg-white before:translate-x-0 checked:before:translate-x-full before:rounded-full before:shadow before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-neutral-400 dark:checked:before:bg-white"
-              checked
-            />
+            <div className="relative">
+              <input
+                type="checkbox"
+                id="pricing-switch"
+                className="sr-only"
+                checked={isChecked}
+                onChange={handleToggle}
+              />
+              <div
+                className={`block w-[3.25rem] h-7 rounded-full cursor-pointer transition-colors ease-in-out duration-200 ${
+                  isChecked
+                    ? "bg-purple-500"
+                    : "bg-gray-300 dark:bg-neutral-800"
+                }`}
+                onClick={handleToggle}
+              />
+              <div
+                className={`dot absolute left-1 top-1 bg-white w-5 h-5 rounded-full transition-transform ease-in-out duration-200 ${
+                  isChecked ? "translate-x-full" : "translate-x-0"
+                }`}
+              />
+            </div>
             <label
-              for="pricing-switch"
-              class="min-w-14 text-sm text-gray-600 ms-3 dark:text-neutral-400"
+              htmlFor="pricing-switch"
+              className="text-sm text-gray-600 dark:text-neutral-400 ms-3"
             >
               Annually
             </label>
@@ -370,12 +390,6 @@ const Pricing = () => {
                 Get started
               </a>
             </div>
-          </div>
-
-          <div class="w-2/3 sm:w-1/2 lg:w-1/3 mx-auto text-center mt-10 md:mt-14 mb-6 lg:mt-24">
-            <h2 class="text-gray-600 dark:text-neutral-400">
-              Trusted by Open Source, enterprise, and more than 99,000 of you
-            </h2>
           </div>
         </div>
 

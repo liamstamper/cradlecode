@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMicrochip } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const html = document.querySelector("html");
@@ -29,6 +31,11 @@ const Header = () => {
               to="/"
               aria-label="Home"
             >
+              <FontAwesomeIcon
+                icon={faMicrochip}
+                size="lg"
+                className="pr-[7px]"
+              />
               CradeCode
             </Link>
 
@@ -85,9 +92,9 @@ const Header = () => {
               <div class="py-2 md:py-0  flex flex-col md:flex-row md:items-center gap-0.5 md:gap-1">
                 <div class="grow">
                   <div class="flex flex-col md:flex-row md:justify-end md:items-center gap-0.5 md:gap-1">
-                    <a
+                    <Link
                       class="p-2 flex items-center text-sm bg-gray-100 text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:bg-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
-                      href="#"
+                      to="/"
                       aria-current="page"
                     >
                       <svg
@@ -106,7 +113,7 @@ const Header = () => {
                         <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                       </svg>
                       Home
-                    </a>
+                    </Link>
 
                     <div class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] [--is-collapse:true] md:[--is-collapse:false] ">
                       <button

@@ -31,7 +31,7 @@ const Hero = () => {
         </div>
 
         <div class="mt-5 max-w-xl text-center mx-auto">
-          <h1 class="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-neutral-200">
+          <h1 className="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-neutral-200 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-violet-600">
             Unlock Your Coding Potential
           </h1>
         </div>
