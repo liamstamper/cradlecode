@@ -7,7 +7,7 @@ import CppLogo from "../assets/cpp-logo.png";
 const Features = () => {
   return (
     <div>
-      <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-10 mx-auto">
+      <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-20 mx-auto">
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 items-center gap-12">
           <div>
             <FontAwesomeIcon
@@ -64,10 +64,10 @@ const Features = () => {
           </div>
           <div>
             <svg
-              class="shrink-0 size-9 text-gray-800 dark:text-white pb-[10px]"
+              class="shrink-0 size-8 mt-8 text-gray-800 dark:text-white "
               xmlns="http://www.w3.org/2000/svg"
-              width="28"
-              height="28"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
