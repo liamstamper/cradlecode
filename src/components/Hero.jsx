@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div class="bg-gradient-to-b from-violet-500/30 via-transparent">
+    <div class="">
       <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
         <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-10 relative z-10">
           <div class="flex justify-center">
@@ -32,8 +32,8 @@ const Hero = () => {
           </div>
 
           <div class="mt-5 max-w-xl text-center mx-auto">
-            <h1 className="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-neutral-200 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-violet-600">
-              Unlock Your Coding Potential
+            <h1 className="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-neutral-200">
+              Unlock Your Coding Potential{" "}
             </h1>
           </div>
 
