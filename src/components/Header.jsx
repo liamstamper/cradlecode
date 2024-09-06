@@ -115,7 +115,7 @@ const Header = () => {
                       Home
                     </Link>
 
-                    <div class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] [--is-collapse:true] md:[--is-collapse:false] ">
+                    <div class="hs-dropdown z-50 shadow-lg [--strategy:static] md:[--strategy:fixed] [--adaptive:none] [--is-collapse:true] md:[--is-collapse:false] ">
                       <button
                         id="hs-header-base-mega-menu-small"
                         type="button"
