@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Homepage from "./Homepage";
-import SignInPage from "./SignInPage";
-import Register from "./components/Register";
-import TutorialPage from "./TutorialPage";
-import CoursesPage from "./components/courses/CoursesPage";
+import Homepage from "./pages/Homepage";
+import SignInPage from "./pages/SignInPage";
+import Register from "./pages/Register";
+import TutorialPage from "./pages/TutorialPage";
+import CoursesPage from "./pages/CoursesPage";
 
 export default function App() {
   return (
