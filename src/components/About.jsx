@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div>
-      <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-[70px] mx-auto">
+      <div class="max-w-[75rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-[70px] mx-auto">
         <div class="grid md:grid-cols-2 gap-12">
           <div class="lg:w-3/4">
             <h2 class="text-3xl text-gray-800 font-bold lg:text-4xl dark:text-white">

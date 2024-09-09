@@ -2,12 +2,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPython } from "@fortawesome/free-brands-svg-icons";
 import { faJs } from "@fortawesome/free-brands-svg-icons";
 import { faJava } from "@fortawesome/free-brands-svg-icons";
-import CppLogo from "../assets/cpp-logo.png";
 
 const Features = () => {
   return (
     <div>
-      <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-20 mx-auto">
+      <div class="max-w-[75rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-20 mx-auto">
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 items-center gap-12">
           <div>
             <FontAwesomeIcon
