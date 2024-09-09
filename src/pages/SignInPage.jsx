@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Register from "./Register";
+import { Link } from "react-router-dom";
 
 const SignInPage = () => {
   return (
@@ -11,13 +12,13 @@ const SignInPage = () => {
               Sign in
             </h1>
             <p className="mt-2 text-sm text-gray-600 dark:text-neutral-400">
-              Don't have an account yet?
-              <a
-                className="text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500"
-                href="../examples/html/signup.html"
+              Don't have an account yet?{" "}
+              <Link
+                className="text-blue-600 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500"
+                to="/register"
               >
                 Sign up here
-              </a>
+              </Link>
             </p>
           </div>
 
