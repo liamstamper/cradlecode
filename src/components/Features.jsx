@@ -63,7 +63,7 @@ const Features = () => {
           </div>
           <div>
             <svg
-              class="shrink-0 size-8 mt-8 text-gray-800 dark:text-white "
+              class="shrink-0 size-10 mt-8 text-gray-800 dark:text-white "
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"

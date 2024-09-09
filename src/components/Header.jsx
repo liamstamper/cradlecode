@@ -1,8 +1,9 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMicrochip } from "@fortawesome/free-solid-svg-icons";
 
-const Header = () => {
+const Header = ({ onSignInClick, onRegisterClick }) => {
   const html = document.querySelector("html");
   const isLightOrAuto =
     localStorage.getItem("hs_theme") === "light" ||
@@ -397,18 +398,18 @@ const Header = () => {
                   </span>
                 </button>
                 <div class=" flex flex-wrap items-center gap-x-1.5">
-                  <Link
+                  <button
                     class="py-[7px] px-2.5 inline-flex items-center font-medium text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-black focus:outline-none focus:bg-gray-100 dark:border-neutral-700 dark:text-white"
-                    to="/signin"
+                    onClick={onSignInClick}
                   >
                     Sign in
-                  </Link>
-                  <Link
+                  </button>
+                  <button
                     class="py-2 px-2.5 inline-flex items-center font-medium text-sm rounded-lg bg-black text-white dark:bg-white dark:text-black focus:outline-none disabled:opacity-50 disabled:pointer-events-none  "
-                    to="/register"
+                    onClick={onRegisterClick}
                   >
                     Get started
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>

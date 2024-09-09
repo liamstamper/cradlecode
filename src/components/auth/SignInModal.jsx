@@ -1,10 +1,11 @@
-import Header from "../components/Header";
-import Register from "./Register";
+import React from "react";
 import { Link } from "react-router-dom";
 
-const SignInPage = () => {
+const SignInModal = ({ isOpen, onClose }) => {
+  if (!isOpen) return null; // Render nothing if modal is not open
+
   return (
-    <div className="min-h-screen dark:bg-black">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm">
       <div className="max-w-lg px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         <div className="max-w-md p-6 sm:p-10 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-neutral-900 dark:border-neutral-700">
           <div className="text-center">
@@ -184,4 +185,5 @@ const SignInPage = () => {
     </div>
   );
 };
-export default SignInPage;
+
+export default SignInModal;
