@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons"; // Correct import
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
   signUpWithEmail,
   signInWithGoogle,
@@ -55,7 +55,7 @@ const RegisterModal = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm">
       {" "}
-      <div className="min-h-screen dark:bg-black">
+      <div className="min-h-screen">
         <div className="max-w-lg px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
           <div className="mt-7 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-neutral-900 dark:border-neutral-700">
             <div className="p-4 sm:p-7">
