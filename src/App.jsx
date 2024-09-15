@@ -6,6 +6,7 @@ import CoursesPage from "./pages/CoursesPage";
 import Header from "./components/Header";
 import SignInModal from "./components/auth/SignInModal";
 import RegisterModal from "./components/auth/RegisterModal";
+import TutorialLoading from "./components/tutorials/TutorialLoading";
 
 export default function App() {
   const [isSignInModalOpen, setSignInModalOpen] = useState(false);
@@ -18,9 +19,10 @@ export default function App() {
   // Handlers for Register modal
   const openRegisterModal = () => setRegisterModalOpen(true);
   const closeRegisterModal = () => setRegisterModalOpen(false);
+
   return (
     <Router>
-      <div className="min-h-screen dark:bg-black">
+      <div className="dark:bg-black">
         <Header
           onSignInClick={openSignInModal}
           onRegisterClick={openRegisterModal}
@@ -29,6 +31,11 @@ export default function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/courses" element={<CoursesPage />} />
           <Route path="/practice" element={<TutorialPage />} />
+          {/* Pass modal handlers to TutorialLoading */}
+          <Route
+            path="/gettingstarted"
+            element={<TutorialLoading onRegisterClick={openRegisterModal} />}
+          />
         </Routes>
         <SignInModal isOpen={isSignInModalOpen} onClose={closeSignInModal} />
         <RegisterModal
