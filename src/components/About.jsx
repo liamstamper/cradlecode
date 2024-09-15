@@ -5,7 +5,7 @@ const About = () => {
         <div class="grid md:grid-cols-2 gap-12">
           <div class="lg:w-3/4">
             <h2 class="text-3xl text-gray-800 font-bold lg:text-4xl dark:text-white">
-              Collaborative Tools to Elevate Your Coding Journey
+              Collaborative Tools to Unlock Your Coding Potential
             </h2>
             <p class="mt-3 text-gray-800 dark:text-neutral-400">
               Unlock your potential with tools designed to make learning to code
@@ -18,7 +18,7 @@ const About = () => {
                 class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500"
                 href="#"
               >
-                Contact sales to learn more
+                Learn more
                 <svg
                   class="shrink-0 size-4 transition ease-in-out group-hover:translate-x-1 group-focus:translate-x-1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +88,7 @@ const About = () => {
               </span>
               <div class="grow">
                 <h3 class="text-base sm:text-lg font-semibold text-gray-800 dark:text-neutral-200">
-                  Developer community support
+                  24/7 Support
                 </h3>
                 <p class="mt-1 text-gray-600 dark:text-neutral-400">
                   Join a community of learners and experienced developers eager
