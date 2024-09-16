@@ -46,7 +46,7 @@ const Hero = () => {
 
           <div className="mt-5 max-w-xl text-center mx-auto">
             <h1 className="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-neutral-200">
-              Elevate Your Coding Journey{" "}
+              Accelerate Your Coding Journey{" "}
             </h1>
           </div>
 
