@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import SignInModal from "./components/auth/SignInModal";
 import RegisterModal from "./components/auth/RegisterModal";
 import TutorialLoading from "./components/tutorials/TutorialLoading";
+import Footer from "./components/Footer";
 
 export default function App() {
   const [isSignInModalOpen, setSignInModalOpen] = useState(false);
@@ -42,6 +43,7 @@ export default function App() {
           isOpen={isRegisterModalOpen}
           onClose={closeRegisterModal}
         />
+        <Footer />
       </div>
     </Router>
   );
