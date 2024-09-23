@@ -1,8 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import RegisterModal from "./RegisterModal";
+import {
+  getAuth,
+  signInWithPopup,
+  GoogleAuthProvider,
+  onAuthStateChanged,
+} from "firebase/auth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { signInWithGoogle, signInWithGithub } from "../../auth/AuthServices";
 
 const SignInModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null; // Render nothing if modal is not open
@@ -11,6 +18,17 @@ const SignInModal = ({ isOpen, onClose }) => {
     // Close sign-in modal and open sign-up modal
     onClose();
     setIsSignUpOpen(true);
+  };
+
+  const handleGoogleSignIn = async () => {
+    const auth = getAuth();
+    try {
+      const result = await signInWithGoogle();
+      setUser(result.user);
+      navigate("/"); // Redirect to home
+    } catch (error) {
+      console.error("Error during sign-in:", error);
+    }
   };
 
   return (
@@ -37,6 +55,7 @@ const SignInModal = ({ isOpen, onClose }) => {
 
               <div className="mt-5">
                 <button
+                  onClick={handleGoogleSignIn}
                   type="button"
                   className="w-full mb-2 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
                 >
