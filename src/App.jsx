@@ -13,16 +13,13 @@ import SignInModal from "./components/auth/SignInModal";
 import RegisterModal from "./components/auth/RegisterModal";
 import Footer from "./components/Footer";
 
-// Move useLocation inside a component wrapped by Router
 function AppContent() {
   const [isSignInModalOpen, setSignInModalOpen] = useState(false);
   const [isRegisterModalOpen, setRegisterModalOpen] = useState(false);
 
-  // Handlers for Sign In modal
   const openSignInModal = () => setSignInModalOpen(true);
   const closeSignInModal = () => setSignInModalOpen(false);
 
-  // Handlers for Register modal
   const openRegisterModal = () => setRegisterModalOpen(true);
   const closeRegisterModal = () => setRegisterModalOpen(false);
 
